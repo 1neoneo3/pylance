@@ -51,7 +51,7 @@ def main():
 
         st.text('Pylanceを入れると下の画像のように、赤い波線が出る箇所があります。\nエラーを発見するには、この赤い部分にカーソルを合わせて見ていきます。')
 
-        im('error.png')
+        im('error.png', 600)
         
         st.subheader('エラー文を選択する')
         option = st.selectbox(
