@@ -100,9 +100,7 @@ def main():
             
             st.text('【対処法】→手前で変数を定義する。')
             
-            im('meri2.png')
-            
-            st.subheader('関数の中の変数')            
+            im('meri2.png')        
             
             st.subheader('文字のタイポ')
             im('m1.png')
@@ -114,6 +112,7 @@ def main():
             st.subheader('関数の中の変数')
             
             im('m2.png')
+            st.text('上の例ではinitialが関数の中で初めて出てきた形になっていて、エラーになっています。')
             st.text('【対処法】→引数として設定してあげる')
             
             st.subheader('エラーは解消できましたか？')
