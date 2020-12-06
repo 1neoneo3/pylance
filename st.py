@@ -223,6 +223,8 @@ def main():
             st.subheader('対処法')   
             st.text('足りていないクオテーションを付け足してあげましょう。')
             
+            im('erim8.png')
+            
             
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
