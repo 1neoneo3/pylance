@@ -66,14 +66,21 @@ def main():
 
             st.text('この表記が出た場合はインデントをする必要があります。Expectedは「期待されている」という意味です。\nExpected indented blockなので、インデントすることを期待されているという意味になります。')
             
+            st.text('例えば次の例だと、if文の後のprint文がインデントされていません。')
+            
+            im('erim6.png')
+            
             st.subheader('対処法')
             
             st.text('インデントを忘れている部分があるのでそこをインデントしてあげます。')
             
+            im('erim7.png')
+            
             st.subheader('このエラーがよく起こる場所')
             st.text('関数の定義、if文、for文、try-except文周りでよく起きます。')
-            st.subheader('このエラーが出た場合は、それらの文の周りを見直してみましょう。')
+            
             im('er1.png')
+            st.text('このエラーが出た場合は、それらの文の周りを見直してみましょう。')
             
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
