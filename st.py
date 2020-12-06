@@ -68,10 +68,11 @@ def main():
             
             st.subheader('対処法')
             
-            st.text('インデントをするだけ')
+            st.text('インデントを忘れている部分があるのでそこをインデントしてあげます。')
             
             st.subheader('このエラーがよく起こる場所')
             st.text('関数の定義、if文、for文、try-except文周りでよく起きます。')
+            st.subheader('このエラーが出た場合は、それらの文の周りを見直してみましょう。')
             im('er1.png')
             
             st.subheader('エラーは解消できましたか？')
