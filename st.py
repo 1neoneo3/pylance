@@ -53,7 +53,7 @@ def main():
 
         im('error.png', 600)
         
-        st.subheader('エラー文を選択する')
+        st.subheader('解決したいエラー文を選択する')
         option = st.selectbox(
         '',
         ('Expected indented block', 'A is not defined', 'Unexpected indentation', 'Expected ")"', 'Expected expression', 'String literal is unterminated', 'Invalid character in token ""'))
