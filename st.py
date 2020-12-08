@@ -53,7 +53,7 @@ def main():
         st.subheader('解決したいエラー文を選択する')
         option = st.selectbox(
         '',
-        ('Expected indented block', 'A is not defined', 'Unexpected indentation', 'Expected ")"', 'Expected expression', 'String literal is unterminated', 'Invalid character in token ""', 'Expected ":"'))
+        ('Expected indented block', 'A is not defined', 'Unexpected indentation', 'Expected ")"', 'Expected expression', 'String literal is unterminated', 'Invalid character in token ""', 'Expected ":"', 'A is possibly unbound'))
         
         
         if option == 'Expected indented block':
@@ -287,7 +287,30 @@ def main():
                 st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！一つレベルアップしました😆😆') 
                 im('img/happy.png')
                 
-                st.balloons()                    
+                st.balloons()
+            
+        if option == 'A is possibly unbound':
+            st.subheader('A is possibly unbound')
+            
+            im('img/unbound.png')
+            
+            st.markdown('この表記が出た場合、変数Aが未定義になっている可能性があります。')
+            
+            st.markdown('例えば、下ではinfo_dictはtry文が実行された時だけ定義されて、exceptの時は定義されていません。ですのでexcept文が実行された時はinfo_dictが定義されていないとエラーが出ます。')
+            im('img/unbound2.png')
+            
+            
+            st.subheader('対処法')   
+            st.markdown('info_dictをtry、exceptのどちらの場合でも定義されるような場所で定義してあげる。')
+            
+            im('img/unbound3.png')
+            
+            st.subheader('エラーは解消できましたか？')
+            if st.button('赤い波線が消えたらクリック'):
+                st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！一つレベルアップしました😆😆') 
+                im('img/happy.png')
+                
+                st.balloons()                      
                 
                 
 def im(img, wid=700):

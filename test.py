@@ -19,3 +19,9 @@ try:
     abc = 1
 except:
     pass
+
+dict = {'A': 5}
+
+dict['B']['C'] = 10
+
+print(dict)
