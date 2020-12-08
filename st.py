@@ -46,7 +46,7 @@ def main():
     if option == 'Pylanceによるエラー発見の方法':
         st.subheader('Pylanceでのエラーの発見の仕方')
 
-        st.markdown('Pylanceを入れると下の画像のように、赤い波線が出る箇所があります。\nエラーを発見するには、この赤い波線にカーソルを合わせて見ていきます。')
+        st.markdown('Pylanceを入れると下の画像のように、赤い波線が出る箇所があります。エラーを発見するには、この赤い波線にカーソルを合わせて見ていきます。')
 
         im('img/error.png')
         
@@ -61,7 +61,7 @@ def main():
             st.subheader('Expected indented block')
             im('img/expindent.png')
 
-            st.markdown('この表記が出た場合はインデントをする必要があります。Expectedは「期待されている」という意味です。\nExpected indented blockなので、インデントすることを期待されているという意味になります。')
+            st.markdown('この表記が出た場合は**インデントをできていない箇所**があります。Expectedは「期待されている」という意味です。Expected indented blockなので、**インデントすることを期待されている**という意味になります。')
             
             st.markdown('例えば次の例だと、if文の後のprint文がインデントされていません。')
             
@@ -91,13 +91,13 @@ def main():
             st.subheader('A is not defined')
             
             im('img/er2.png')
-            st.markdown('この表記が出た場合はAという変数を定義していない。もしくは、Aというモジュールを\nimportしていないのどちらかです。Aがモジュール名の場合はモジュールのimportの記述\nを忘れている可能性があります。')
+            st.markdown('この表記が出た場合は**Aという変数を定義していない。**もしくは、**Aというモジュールをimportしていない**のどちらかです。Aがモジュール名の場合はモジュールのimportの記述を忘れている可能性があります。')
             
             st.subheader('対処法')
             st.markdown('次の3つを確認してみて下さい。')
-            st.markdown('①import文を忘れている場合はそれを書きます。')
-            st.markdown('②変数が定義されていない場合は定義します。')
-            st.markdown('③文字に間違いがないかチェックします。')
+            st.markdown('**①import文を忘れている場合はそれを書きます。**')
+            st.markdown('**②変数が定義されていない場合は定義します。**')
+            st.markdown('**③文字に間違いがないかチェックします。**')
             
             st.subheader('このエラーがよく起こる場面')
 
@@ -141,7 +141,7 @@ def main():
             im('img/er4.png')     
             
             st.subheader('対処法')   
-            st.markdown('インデントを解消します。\n例えば上の2つ目のprintだと、if文や、for文、関数の定義のdefの後などではないので\nインデントの必要はないのでインデントを戻します。')
+            st.markdown('インデントを解消します。例えば上の2つ目のprintだと、if文や、for文、関数の定義のdefの後などではないのでインデントの必要はないのでインデントを戻します。')
             
             im('img/er5.png')   
             
@@ -157,7 +157,7 @@ def main():
             
             im('img/mml1.png')
             
-            st.markdown('この表記が出た場合は、どこか近くの行で)が抜けている可能性があります。')
+            st.markdown('この表記が出た場合は、どこか近くの行で**)が抜けている**可能性があります。')
             
             st.markdown('例えば、こちら↓はfor文の下のprintの最後の)を忘れている例です。')
             im('img/erim.png')
@@ -179,7 +179,7 @@ def main():
         
             im('img/er8.png')
             
-            st.markdown('この表記の意味は「式」が期待されています。という意味です。')
+            st.markdown('この表記の意味は**「式」が期待されています。**という意味です。')
             
             st.markdown('Pythonで「式」とは、実行されることによって何かの結果になるものです。')
             
@@ -217,7 +217,7 @@ def main():
         
             im('img/er6.png')
             
-            st.markdown('この表記が出た場合は文字列のクオテーションの閉じ忘れの可能性があります。')
+            st.markdown('この表記が出た場合は文字列の**クオテーションの閉じ忘れ**の可能性があります。')
             
             
             
@@ -243,14 +243,14 @@ def main():
             
             im('img/er9.png')
             
-            st.markdown('この表記が出た場合、全角の空白が入っている可能性があります。')
+            st.markdown('この表記が出た場合、**全角の空白**がどこかに入っている可能性があります。')
             
             st.markdown('例えば、下ではfor文の:の後ろに全角の空白が入っています。')
             im('img/erim4.png')
             
             
             st.subheader('対処法')   
-            st.markdown(':の後に入っている全角の空白を消します。上のように、文の後に#を置くには「半角スペース2つ分」\n空けて#を置けば問題ないです。')
+            st.markdown(':の後に入っている全角の空白を消します。上のように、文の後に#を置くには「半角スペース2つ分」空けて#を置けば問題ないです。')
             
             im('img/6em.png')
             
