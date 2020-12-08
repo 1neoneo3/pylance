@@ -12,7 +12,10 @@ else:
     
 # for文
 for i in range(5):
-    print(i)
+    if i == 3:
+        print(i)
+    
+    
 
 # try-except文
 try:

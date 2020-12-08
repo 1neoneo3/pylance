@@ -207,7 +207,7 @@ def main():
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
                 st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！😆😆') 
-                im('img/happy.png')
+                im('img/banzai.png')
                 
                 st.balloons() 
 
@@ -234,7 +234,7 @@ def main():
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
                 st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！😆😆') 
-                im('img/happy.png')
+                im('img/jumping.jpg')
                 
                 st.balloons()      
 
@@ -257,7 +257,7 @@ def main():
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
                 st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！一つレベルアップしました😆😆') 
-                im('img/happy.png')
+                im('img/jump.jpg')
                 
                 st.balloons() 
                 
