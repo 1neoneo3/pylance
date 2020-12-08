@@ -5,16 +5,15 @@ def main():
 
     st.title('Pylanceを使ってエラーをスムーズに解決しよう')
     
-    st.text('Pythonで自力でエラー解決が解決できるようになるためには、エラー文を読む、\nデバッグをするなどがあります。ただ、コードが長くなればなるほどエラーの解決に時間がかかります。')
+    st.markdown('エラー箇所の特定を素早くできるように視覚化してくれるのがVSCodeの拡張機能の**Pylance**です。')
+    
+    st.markdown('Pylanceの視覚化機能を使うと、自力でエラーを解決する力が早く身に付きます！')    
+    
+    st.markdown('Pythonで自力でエラー解決が解決できるようになるためには、エラー文を読む、\nデバッグをするなどがあります。ただ、コードが長くなればなるほどエラーの解決に時間がかかります。')    
+    
+    st.markdown('ここでは、そのPylanceを使ったエラーの解決方法について紹介していきます。')
 
-    
-    st.text('コードが長くなっても、エラー箇所の特定を素早くできるように視覚化して\nくれるのがVSCodeの拡張機能であるPylanceです。')
-    
-    st.text('ここでは、そのPylanceを使ったエラーの解決方法について紹介していきます。')
-    
-    st.text('Pylanceの視覚化機能を使うと、自力でエラーを解決する力が早く身に付きます！')
-
-    im('head_img.png', 650)
+    im('img/head_img.png')
     
     st.subheader('どのメニューを選びますか？')
     option = st.selectbox(
@@ -24,68 +23,68 @@ def main():
     if option == 'Pylanceのインストール方法←まずはこちら！':
         st.subheader('Pylanceのインストール方法')
 
-        st.text('Pylanceをインストールするには、VSCodeの拡張機能でpylanceと入力して、')
+        st.markdown('Pylanceをインストールするには、VSCodeの拡張機能でpylanceと入力して、')
         
-        im('inst1.png')
+        im('img/inst1.png')
         
-        st.text('出てきたものをインストールします。')
-        im('inst2.png')
+        st.markdown('出てきたものをインストールします。')
+        im('img/inst2.png')
         
-        st.text('その後に、VSCode右下の歯車ボタンの"管理"をクリック')
-        im('kanri.png')
-        st.text('"設定"を開きます。')
-        im('inst4.png')
+        st.markdown('その後に、VSCode右下の歯車ボタンの"管理"をクリック')
+        im('img/kanri.png')
+        st.markdown('"設定"を開きます。')
+        im('img/inst4.png')
         
-        st.text('そこで、「python.analysis.typeCheckingMode」を検索して、設定をbasicにします。')
-        im('inst5.png')
+        st.markdown('そこで、「**python.analysis.typeCheckingMode**」を検索して、設定を**basic**にします。')
+        im('img/inst5.png')
         
-        st.text('これで、Pylanceのインストールが完了です。')
+        st.markdown('これで、Pylanceのインストールが完了です。')
 
         if st.button('完了したらクリック！'):
-            st.text('おめでとうございます！！😆😆')
-            im('happy.png', 600)
+            st.markdown('おめでとうございます！！😆😆')
+            im('img/happy.png')
             st.balloons()
     
     if option == 'Pylanceによるエラー発見の方法':
         st.subheader('Pylanceでのエラーの発見の仕方')
 
-        st.text('Pylanceを入れると下の画像のように、赤い波線が出る箇所があります。\nエラーを発見するには、この赤い波線にカーソルを合わせて見ていきます。')
+        st.markdown('Pylanceを入れると下の画像のように、赤い波線が出る箇所があります。\nエラーを発見するには、この赤い波線にカーソルを合わせて見ていきます。')
 
-        im('error.png', 600)
+        im('img/error.png')
         
         st.subheader('解決したいエラー文を選択する')
         option = st.selectbox(
         '',
-        ('Expected indented block', 'A is not defined', 'Unexpected indentation', 'Expected ")"', 'Expected expression', 'String literal is unterminated', 'Invalid character in token ""'))
+        ('Expected indented block', 'A is not defined', 'Unexpected indentation', 'Expected ")"', 'Expected expression', 'String literal is unterminated', 'Invalid character in token ""', 'Expected ":"'))
         
         
         if option == 'Expected indented block':
             
             st.subheader('Expected indented block')
-            im('expindent.png')
+            im('img/expindent.png')
 
-            st.text('この表記が出た場合はインデントをする必要があります。Expectedは「期待されている」という意味です。\nExpected indented blockなので、インデントすることを期待されているという意味になります。')
+            st.markdown('この表記が出た場合はインデントをする必要があります。Expectedは「期待されている」という意味です。\nExpected indented blockなので、インデントすることを期待されているという意味になります。')
             
-            st.text('例えば次の例だと、if文の後のprint文がインデントされていません。')
+            st.markdown('例えば次の例だと、if文の後のprint文がインデントされていません。')
             
-            im('erim6.png')
-            
+            im('img/erim6.png')
+
             st.subheader('対処法')
             
-            st.text('インデントを忘れている部分があるのでそこをインデントしてあげます。')
+            st.markdown('インデントを忘れている部分があるのでそこをインデントしてあげます。')
             
-            im('erim7.png')
+            im('img/erim7.png')
             
             st.subheader('このエラーがよく起こる場所')
-            st.text('関数の定義、if文、for文、try-except文周りでよく起きます。')
+            st.markdown('関数の定義、if文、for文、try-except文周りでよく起きます。')
             
-            im('er1.png')
-            st.text('このエラーが出た場合は、それらの文の周りを見直してみましょう。')
+            im('img/er1.png')
+            st.markdown('このエラーが出た場合は、それらの文の周りを見直してみましょう。')
             
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
-                st.text('素晴らしい！！エラー解決の力がまた一つ身に付きました！！😆😆') 
-                im('happy.png', 600)
+                st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！😆😆') 
+                im('img/happy.png')
                 
                 st.balloons()           
                 
@@ -93,116 +92,124 @@ def main():
         if option == 'A is not defined':
             st.subheader('A is not defined')
             
-            im('er2.png')
-            st.text('この表記が出た場合はAという変数を定義していない。もしくは、Aというモジュールを\nimportしていないのどちらかです。Aがモジュール名の場合はモジュールのimportの記述\nを忘れている可能性があります。')
+            im('img/er2.png')
+            st.markdown('この表記が出た場合はAという変数を定義していない。もしくは、Aというモジュールを\nimportしていないのどちらかです。Aがモジュール名の場合はモジュールのimportの記述\nを忘れている可能性があります。')
             
             st.subheader('対処法')
-            st.text('次の3つを確認してみて下さい。')
-            st.text('①import文を忘れている場合はそれを書きます。②変数が定義されていない場合は定義します。\n③文字に間違いがないかチェックします。')
+            st.markdown('次の3つを確認してみて下さい。')
+            st.markdown('①import文を忘れている場合はそれを書きます。')
+            st.markdown('②変数が定義されていない場合は定義します。')
+            st.markdown('③文字に間違いがないかチェックします。')
             
             st.subheader('このエラーがよく起こる場面')
 
             st.subheader('変数の未定義')
-            im('meri1.png')
-            st.text('上の例ではtestという変数が定義されていません。')
+            im('img/meri1.png')
+            st.markdown('上の例ではtestという変数が定義されていません。')
             
-            st.text('【対処法】→手前で変数を定義する。')
+            st.markdown('【対処法】→手前で変数を定義する。')
             
-            im('meri2.png')        
+            im('img/meri2.png')        
             
             st.subheader('文字のタイポ')
-            im('m1.png')
+            im('img/m1.png')
             
-            st.text('上の例ではprintと書くところをprntと書いてしまっています。')
+            st.markdown('上の例ではprintと書くところをprntと書いてしまっています。')
             
-            st.text('【対処法】→誤字の訂正')
+            st.markdown('【対処法】→誤字の訂正')
             
             st.subheader('関数の中の変数')
             
-            im('m2.png')
-            st.text('上の例ではinitialが関数の中で初めて出てきた形になっていて、エラーになっています。')
-            st.text('【対処法】→引数として設定してあげる')
+            im('img/m2.png')
+            st.markdown('上の例ではinitialが関数の中で初めて出てきた形になっていて、エラーになっています。')
+            st.markdown('【対処法】→引数として設定してあげる')
+            
+            im('img/emm.png')
             
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
-                st.text('素晴らしい！！エラー解決の力がまた一つ身に付きました！！😆😆') 
-                im('happy.png', 600)
+                st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！😆😆') 
+                im('img/happy.png')
                 
                 st.balloons()
-                 
                 
         if option == 'Unexpected indentation':
             st.subheader('Unexpected indentation')
             
-            im('er3.png')
+            im('img/er3.png')
             
-            st.text('この表記が出た場合はインデントをする必要がないところでインデントをしている可能性があります。')
+            st.markdown('この表記が出た場合はインデントをする必要がないところでインデントをしている可能性があります。')
             
-            im('er4.png')     
+            im('img/er4.png')     
             
             st.subheader('対処法')   
-            st.text('インデントを解消します。\n例えば上の2つ目のprintだと、if文や、for文、関数の定義のdefの後などではないので\nインデントの必要はないのでインデントを戻します。')
+            st.markdown('インデントを解消します。\n例えば上の2つ目のprintだと、if文や、for文、関数の定義のdefの後などではないので\nインデントの必要はないのでインデントを戻します。')
+            
+            im('img/er5.png')   
             
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
-                st.text('素晴らしい！！エラー解決の力がまた一つ身に付きました！！😆😆') 
-                im('happy.png', 600)
+                st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！😆😆') 
+                im('img/happy.png')
                 
                 st.balloons()
                 
         if option == 'Expected ")"':
             st.subheader('Expected ")"')
             
-            im('er5.png')
+            im('img/mml1.png')
             
-            st.text('この表記が出た場合は、どこか近くの行で)が抜けている可能性があります。')
+            st.markdown('この表記が出た場合は、どこか近くの行で)が抜けている可能性があります。')
             
-            st.text('例えば、こちらはprintの最後の)を忘れている例です。')
-            im('erim.png')
-            
+            st.markdown('例えば、こちら↓はfor文の下のprintの最後の)を忘れている例です。')
+            im('img/erim.png')
             
             st.subheader('対処法')   
-            st.text(')が抜けている箇所を見つけて)を付け足してあげる必要があります。')
+            st.markdown(')が抜けている箇所を見つけて)を付け足してあげる必要があります。')
             
+            im('img/elm1.png')
             
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
-                st.text('素晴らしい！！エラー解決の力がまた一つ身に付きました！！😆😆') 
-                im('happy.png', 500)
+                st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！😆😆') 
+                im('img/happy.png')
                 
                 st.balloons()                    
 
         if option == 'Expected expression':
             st.subheader('Expected expression')
         
-            im('er8.png')
+            im('img/er8.png')
             
-            st.text('この表記の意味は「式」が期待されています。という意味です。')
+            st.markdown('この表記の意味は「式」が期待されています。という意味です。')
             
-            st.text('Pythonで「式」とは、実行されることによって何かの結果になるものです。')
+            st.markdown('Pythonで「式」とは、実行されることによって何かの結果になるものです。')
             
-            st.text('例をあげると、')
+            st.markdown('例をあげると、')
             
-            st.text('1 + 5')
+            st.markdown('1 + 5')
             
-            st.text('[3, 5, 7, 9]')
+            st.markdown('[3, 5, 7, 9]')
             
-            st.text('など、なんらかの結果やデータになるものが式です。')
+            st.markdown('など、なんらかの結果やデータになるものが式です。')
             
-            st.text('エラーの例としては、例えばこちら')
-            im('erim2.png')
+            st.markdown('エラーの例としては、例えばこちら')
+            im('img/erim2.png')
             
-            st.text('こちらは、)が多いので、本来のprintが式になっていません。')
+            st.markdown('1 + 2 + だと式として完成していないのでエラーとなります。')
             
             
             st.subheader('対処法')   
-            st.text('式として成立していない部分を見つけて直してあげよう')
+            st.markdown('式として成立していない部分を見つけて直してあげよう')
             
+            im('img/erml.png')
+            
+            st.markdown('5を足すことで一つの式となりました。')
             
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
-                st.text('素晴らしい！！エラー解決の力がまた一つ身に付きました！！😆😆') 
-                im('happy.png', 500)
+                st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！😆😆') 
+                im('img/happy.png')
                 
                 st.balloons() 
 
@@ -210,58 +217,84 @@ def main():
             
             st.subheader('String literal is unterminated')
         
-            im('er6.png')
+            im('img/er6.png')
             
-            st.text('この表記が出た場合は文字列のクオテーションの閉じ忘れの可能性があります。')
+            st.markdown('この表記が出た場合は文字列のクオテーションの閉じ忘れの可能性があります。')
             
             
             
-            st.text('例えば、こちらは文字列の最後の"を忘れている例です。')
-            im('erim3.png')
+            st.markdown('例えば、こちらは文字列の最後の"を忘れている例です。')
+            im('img/erim3.png')
             
             
             st.subheader('対処法')   
-            st.text('足りていないクオテーションを付け足してあげましょう。')
+            st.markdown('足りていないクオテーションを付け足してあげましょう。')
             
-            im('erim8.png')
+            im('img/errm.png')
             
             
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
-                st.text('素晴らしい！！エラー解決の力がまた一つ身に付きました！！😆😆') 
-                im('happy.png', 500)
+                st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！😆😆') 
+                im('img/happy.png')
                 
                 st.balloons()      
 
         if option == 'Invalid character in token ""':
             st.subheader('Invalid character in token ""')
             
-            im('er9.png')
+            im('img/er9.png')
             
-            st.text('この表記が出た場合、全角の空白が入っている可能性があります。')
+            st.markdown('この表記が出た場合、全角の空白が入っている可能性があります。')
             
-            st.text('例えば、下ではfor文の:の後ろに全角の空白が入っています。')
-            im('erim4.png')
+            st.markdown('例えば、下ではfor文の:の後ろに全角の空白が入っています。')
+            im('img/erim4.png')
             
             
             st.subheader('対処法')   
-            st.text('全角の空白を消します。上のように、文の後に#を置くには「半角スペース2つ分」\n空けて#を置けば問題ないです。')
+            st.markdown(':の後に入っている全角の空白を消します。上のように、文の後に#を置くには「半角スペース2つ分」\n空けて#を置けば問題ないです。')
             
+            im('img/6em.png')
             
             st.subheader('エラーは解消できましたか？')
             if st.button('赤い波線が消えたらクリック'):
-                st.text('素晴らしい！！エラー解決の力がまた一つ身に付きました！！😆😆') 
-                im('happy.png', 500)
+                st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！一つレベルアップしました😆😆') 
+                im('img/happy.png')
                 
-                st.balloons()                 
+                st.balloons() 
+                
+        if option == 'Expected ":"':
+            st.subheader('Expected ":"')
+            
+            im('img/ex1.png')
+            
+            st.markdown('この表記が出た場合、どこかにコロン:を忘れています。')
+            
+            st.markdown('例えば、下では関数を定義する際のコロン:を忘れています。')
+            im('img/ex2.png')
+            
+            
+            st.subheader('対処法')   
+            st.markdown('コロン:を忘れている部分に付け足してあげます。')
+            
+            im('img/ex3.png')
+            
+            st.markdown('このエラーがよく起こる場面')
+            st.markdown('関数の定義、if文、for文、try-except文周りでよく起きます。')
+            
+            im('img/er1.png')
+            
+            st.subheader('エラーは解消できましたか？')
+            if st.button('赤い波線が消えたらクリック'):
+                st.markdown('素晴らしい！！エラー解決の力がまた一つ身に付きましたね！！一つレベルアップしました😆😆') 
+                im('img/happy.png')
+                
+                st.balloons()                    
                 
                 
-def im(img, wid=450):
+def im(img, wid=700):
     image = Image.open(img)
     st.image(image, width=wid)
 
 if __name__ == '__main__':
     main()
-
-
-
