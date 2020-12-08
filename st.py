@@ -141,7 +141,7 @@ def main():
             im('img/er4.png')     
             
             st.subheader('対処法')   
-            st.markdown('インデントを解消します。例えば上の2つ目のprintだと、if文や、for文、関数の定義のdefの後などではないのでインデントの必要はないのでインデントを戻します。')
+            st.markdown('インデントを解消します。例えば上の2つ目のprintだと、if文や、for文、関数の定義のdefの後などではなく、インデントの必要はないのでインデントを戻します。')
             
             im('img/er5.png')   
             
